@@ -7,11 +7,11 @@
       xsi:schemaLocation="
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
         http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
-        http://www.mulesoft.org/schema/mule/espn http://www.mulesoft.org/schema/mule/espn/1.0-SNAPSHOT/mule-espn.xsd">
+        http://www.mulesoft.org/schema/mule/espn http://www.mulesoft.org/schema/mule/espn/1.0/mule-espn.xsd">
 
-    <context:property-placeholder location="mule.properties"/>
+    <!-- <context:property-placeholder location="mule.properties"/> -->
 
-    <espn:config apiKey="${apiKey}"/>
+    <espn:config apiKey="${ESPN_ACCESS_KEY}"/>
 
     <!-- ESPN Athletes API -->
 
