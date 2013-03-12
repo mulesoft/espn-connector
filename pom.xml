@@ -17,6 +17,7 @@
         <devkit.studio.package.skip>false</devkit.studio.package.skip>
         <mule.devkit.version>3.3.2</mule.devkit.version>
         <category>Community</category>
+        <licensePath>LICENSE.md</licensePath>
     </properties>
 
     <dependencies>
