@@ -69,7 +69,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <meta name="description" content="Documentation for ESPN Connector." />
+  <meta name="description" content="Documentation for Mule ESPN Cloud Connector." />
 
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico" />
 <title>
@@ -77,7 +77,7 @@
   AbstractMessageProcessor
 
 
-| ESPN Connector
+| Mule ESPN Cloud Connector
 
 </title>
 <link href="../../../../../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
@@ -120,7 +120,7 @@
   feedback_widget_options.color = "#2F74AE";
   feedback_widget_options.style = "question";
 
-  feedback_widget_options.tag = "ESPN Connector";
+  feedback_widget_options.tag = "Mule ESPN Cloud Connector";
 
   feedback_widget_options.limit = "3";
 
@@ -133,7 +133,7 @@
 <div id="header">
     <div id="headerLeft">
     
-      <span id="masthead-title">ESPN Connector</span>
+      <span id="masthead-title">Mule ESPN Cloud Connector</span>
     
     <ul id="header-tabs" class="">
     
@@ -228,6 +228,9 @@
           <li class="selected api apilevel-"><a href="../../../../../java/org/mule/module/processors/AbstractMessageProcessor.html">AbstractMessageProcessor</a>&lt;O&gt;</li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetAthletesMessageProcessor.html">GetAthletesMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetAthletesNewsMessageProcessor.html">GetAthletesNewsMessageProcessor</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetEspnNowMessageProcessor.html">GetEspnNowMessageProcessor</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetEspnNowPopularMessageProcessor.html">GetEspnNowPopularMessageProcessor</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetEspnNowTopMessageProcessor.html">GetEspnNowTopMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetNewsByIdMessageProcessor.html">GetNewsByIdMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetNewsHeadlinesMessageProcessor.html">GetNewsHeadlinesMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetNewsHeadlinesTopMessageProcessor.html">GetNewsHeadlinesTopMessageProcessor</a></li>
@@ -398,7 +401,7 @@ Summary:
 
     <tr>
         
-        <td colspan="3" class="jd-inheritance-class-cell"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a></td>
+        <td colspan="3" class="jd-inheritance-class-cell">java.lang.Object</td>
     </tr>
     
 
@@ -445,6 +448,12 @@ Summary:
             
               <a href="../../../../../java/org/mule/module/processors/GetAthletesNewsMessageProcessor.html">GetAthletesNewsMessageProcessor</a>,
             
+              <a href="../../../../../java/org/mule/module/processors/GetEspnNowMessageProcessor.html">GetEspnNowMessageProcessor</a>,
+            
+              <a href="../../../../../java/org/mule/module/processors/GetEspnNowPopularMessageProcessor.html">GetEspnNowPopularMessageProcessor</a>,
+            
+              <a href="../../../../../java/org/mule/module/processors/GetEspnNowTopMessageProcessor.html">GetEspnNowTopMessageProcessor</a>,
+            
               <a href="../../../../../java/org/mule/module/processors/GetNewsByIdMessageProcessor.html">GetNewsByIdMessageProcessor</a>,
             
               <a href="../../../../../java/org/mule/module/processors/GetNewsHeadlinesMessageProcessor.html">GetNewsHeadlinesMessageProcessor</a>,
@@ -475,47 +484,59 @@ Summary:
           </tr>
         <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetAthletesMessageProcessor.html">GetAthletesMessageProcessor</a></td>
-              <td class="jd-descrcol" width="100%">GetAthletesMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/espnConnector.html#getAthletes(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getAthletes(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/espnConnector.html">espnConnector</a></code>.&nbsp;</td>
+              <td class="jd-descrcol" width="100%">GetAthletesMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getAthletes(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getAthletes(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>.&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetAthletesNewsMessageProcessor.html">GetAthletesNewsMessageProcessor</a></td>
-              <td class="jd-descrcol" width="100%">GetAthletesNewsMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/espnConnector.html#getAthletesNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getAthletesNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/espnConnector.html">espnConnector</a></code>.&nbsp;</td>
+              <td class="jd-descrcol" width="100%">GetAthletesNewsMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getAthletesNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getAthletesNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetEspnNowMessageProcessor.html">GetEspnNowMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">GetEspnNowMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getEspnNow(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getEspnNow(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetEspnNowPopularMessageProcessor.html">GetEspnNowPopularMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">GetEspnNowPopularMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getEspnNowPopular(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getEspnNowPopular(java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetEspnNowTopMessageProcessor.html">GetEspnNowTopMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">GetEspnNowTopMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getEspnNowTop(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getEspnNowTop(java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetNewsByIdMessageProcessor.html">GetNewsByIdMessageProcessor</a></td>
-              <td class="jd-descrcol" width="100%">GetNewsByIdMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/espnConnector.html#getNewsById(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getNewsById(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/espnConnector.html">espnConnector</a></code>.&nbsp;</td>
+              <td class="jd-descrcol" width="100%">GetNewsByIdMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getNewsById(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getNewsById(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetNewsHeadlinesMessageProcessor.html">GetNewsHeadlinesMessageProcessor</a></td>
-              <td class="jd-descrcol" width="100%">GetNewsHeadlinesMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/espnConnector.html#getNewsHeadlines(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getNewsHeadlines(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/espnConnector.html">espnConnector</a></code>.&nbsp;</td>
+              <td class="jd-descrcol" width="100%">GetNewsHeadlinesMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getNewsHeadlines(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getNewsHeadlines(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetNewsHeadlinesTopMessageProcessor.html">GetNewsHeadlinesTopMessageProcessor</a></td>
-              <td class="jd-descrcol" width="100%">GetNewsHeadlinesTopMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/espnConnector.html#getNewsHeadlinesTop(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getNewsHeadlinesTop(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/espnConnector.html">espnConnector</a></code>.&nbsp;</td>
+              <td class="jd-descrcol" width="100%">GetNewsHeadlinesTopMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getNewsHeadlinesTop(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getNewsHeadlinesTop(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetNewsMessageProcessor.html">GetNewsMessageProcessor</a></td>
-              <td class="jd-descrcol" width="100%">GetNewsMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/espnConnector.html#getNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/espnConnector.html">espnConnector</a></code>.&nbsp;</td>
+              <td class="jd-descrcol" width="100%">GetNewsMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetSportsMessageProcessor.html">GetSportsMessageProcessor</a></td>
-              <td class="jd-descrcol" width="100%">GetSportsMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/espnConnector.html#getSports(java.lang.String, java.lang.String, java.lang.String)">getSports(java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/espnConnector.html">espnConnector</a></code>.&nbsp;</td>
+              <td class="jd-descrcol" width="100%">GetSportsMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getSports(java.lang.String, java.lang.String, java.lang.String)">getSports(java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetSportsOrganizingBodiesMessageProcessor.html">GetSportsOrganizingBodiesMessageProcessor</a></td>
-              <td class="jd-descrcol" width="100%">GetSportsOrganizingBodiesMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/espnConnector.html#getSportsOrganizingBodies(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getSportsOrganizingBodies(java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/espnConnector.html">espnConnector</a></code>.&nbsp;</td>
-          </tr>
-        <tr class=" api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetSportsOrganizingGroupsDivisionsMessageProcessor.html">GetSportsOrganizingGroupsDivisionsMessageProcessor</a></td>
-              <td class="jd-descrcol" width="100%">GetSportsOrganizingGroupsDivisionsMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/espnConnector.html#getSportsOrganizingGroupsDivisions(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getSportsOrganizingGroupsDivisions(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/espnConnector.html">espnConnector</a></code>.&nbsp;</td>
+              <td class="jd-descrcol" width="100%">GetSportsOrganizingBodiesMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getSportsOrganizingBodies(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getSportsOrganizingBodies(java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>.&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetTeamsMessageProcessor.html">GetTeamsMessageProcessor</a></td>
-              <td class="jd-descrcol" width="100%">GetTeamsMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/espnConnector.html#getTeams(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getTeams(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/espnConnector.html">espnConnector</a></code>.&nbsp;</td>
+              <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetSportsOrganizingGroupsDivisionsMessageProcessor.html">GetSportsOrganizingGroupsDivisionsMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">GetSportsOrganizingGroupsDivisionsMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getSportsOrganizingGroupsDivisions(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getSportsOrganizingGroupsDivisions(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetTeamsMessageProcessor.html">GetTeamsMessageProcessor</a></td>
+              <td class="jd-descrcol" width="100%">GetTeamsMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getTeams(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getTeams(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/processors/GetTeamsNewsMessageProcessor.html">GetTeamsNewsMessageProcessor</a></td>
-              <td class="jd-descrcol" width="100%">GetTeamsNewsMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/espnConnector.html#getTeamsNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getTeamsNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/espnConnector.html">espnConnector</a></code>.&nbsp;</td>
+              <td class="jd-descrcol" width="100%">GetTeamsNewsMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getTeamsNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getTeamsNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>.&nbsp;</td>
           </tr>
   </table>
       </div>
@@ -709,7 +730,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractMessageProcessor.html#overwritePayload(org.mule.api.MuleEvent, java.lang.Object)">overwritePayload</a></span>(MuleEvent event, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> resultPayload)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractMessageProcessor.html#overwritePayload(org.mule.api.MuleEvent, java.lang.Object)">overwritePayload</a></span>(MuleEvent event, Object resultPayload)</nobr>
         
         <div class="jd-descrdiv">Overwrites the event payload with the specified one
  
@@ -794,7 +815,7 @@ Summary:
             O</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractMessageProcessor.html#findOrCreate(java.lang.Class, boolean, org.mule.api.MuleEvent)">findOrCreate</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a> moduleClass, boolean shouldAutoCreate, MuleEvent muleEvent)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractMessageProcessor.html#findOrCreate(java.lang.Class, boolean, org.mule.api.MuleEvent)">findOrCreate</a></span>(Class moduleClass, boolean shouldAutoCreate, MuleEvent muleEvent)</nobr>
         
         <div class="jd-descrdiv">Obtains the expression manager from the Mule context and initialises the connector.</div>
   
@@ -844,7 +865,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#computeClassHierarchy(java.lang.Class, java.util.List)">computeClassHierarchy</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a> clazz, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a> classes)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#computeClassHierarchy(java.lang.Class, java.util.List)">computeClassHierarchy</a></span>(Class clazz, List classes)</nobr>
         
         <div class="jd-descrdiv">Get all superclasses and interfaces recursively.</div>
   
@@ -859,10 +880,10 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#evaluate(org.mule.util.TemplateParser.PatternInfo, org.mule.api.expression.ExpressionManager, org.mule.api.MuleMessage, java.lang.Object)">evaluate</a></span>(TemplateParser.PatternInfo patternInfo, ExpressionManager expressionManager, MuleMessage muleMessage, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#evaluate(org.mule.util.TemplateParser.PatternInfo, org.mule.api.expression.ExpressionManager, org.mule.api.MuleMessage, java.lang.Object)">evaluate</a></span>(TemplateParser.PatternInfo patternInfo, ExpressionManager expressionManager, MuleMessage muleMessage, Object source)</nobr>
         
   </td></tr>
 
@@ -875,10 +896,10 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#evaluateAndTransform(org.mule.api.MuleContext, org.mule.api.MuleMessage, java.lang.reflect.Type, java.lang.String, java.lang.Object)">evaluateAndTransform</a></span>(MuleContext muleContext, MuleMessage muleMessage, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> expectedType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> expectedMimeType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#evaluateAndTransform(org.mule.api.MuleContext, org.mule.api.MuleMessage, java.lang.reflect.Type, java.lang.String, java.lang.Object)">evaluateAndTransform</a></span>(MuleContext muleContext, MuleMessage muleMessage, Type expectedType, String expectedMimeType, Object source)</nobr>
         
   </td></tr>
 
@@ -891,10 +912,10 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#evaluateAndTransform(org.mule.api.MuleContext, org.mule.api.MuleEvent, java.lang.reflect.Type, java.lang.String, java.lang.Object)">evaluateAndTransform</a></span>(MuleContext muleContext, MuleEvent event, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> expectedType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> expectedMimeType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#evaluateAndTransform(org.mule.api.MuleContext, org.mule.api.MuleEvent, java.lang.reflect.Type, java.lang.String, java.lang.Object)">evaluateAndTransform</a></span>(MuleContext muleContext, MuleEvent event, Type expectedType, String expectedMimeType, Object source)</nobr>
         
   </td></tr>
 
@@ -910,7 +931,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isAssignableFrom(java.lang.reflect.Type, java.lang.Class)">isAssignableFrom</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> expectedType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a> clazz)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isAssignableFrom(java.lang.reflect.Type, java.lang.Class)">isAssignableFrom</a></span>(Type expectedType, Class clazz)</nobr>
         
   </td></tr>
 
@@ -926,7 +947,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isList(java.lang.reflect.Type)">isList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> type)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isList(java.lang.reflect.Type)">isList</a></span>(Type type)</nobr>
         
   </td></tr>
 
@@ -942,9 +963,9 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isListClass(java.lang.Class)">isListClass</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a> clazz)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isListClass(java.lang.Class)">isListClass</a></span>(Class clazz)</nobr>
         
-        <div class="jd-descrdiv">Checks whether the specified class parameter is an instance of <code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a></code></div>
+        <div class="jd-descrdiv">Checks whether the specified class parameter is an instance of List</div>
   
   </td></tr>
 
@@ -960,7 +981,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isMap(java.lang.reflect.Type)">isMap</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> type)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isMap(java.lang.reflect.Type)">isMap</a></span>(Type type)</nobr>
         
   </td></tr>
 
@@ -976,9 +997,9 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isMapClass(java.lang.Class)">isMapClass</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a> clazz)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isMapClass(java.lang.Class)">isMapClass</a></span>(Class clazz)</nobr>
         
-        <div class="jd-descrdiv">Checks whether the specified class parameter is an instance of <code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a></code></div>
+        <div class="jd-descrdiv">Checks whether the specified class parameter is an instance of Map</div>
   
   </td></tr>
 
@@ -991,10 +1012,10 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#transform(org.mule.api.MuleContext, org.mule.api.MuleMessage, java.lang.reflect.Type, java.lang.String, java.lang.Object)">transform</a></span>(MuleContext muleContext, MuleMessage message, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> expectedType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> expectedMimeType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#transform(org.mule.api.MuleContext, org.mule.api.MuleMessage, java.lang.reflect.Type, java.lang.String, java.lang.Object)">transform</a></span>(MuleContext muleContext, MuleMessage message, Type expectedType, String expectedMimeType, Object source)</nobr>
         
   </td></tr>
 
@@ -1007,10 +1028,10 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#transform(org.mule.api.MuleContext, org.mule.api.MuleEvent, java.lang.reflect.Type, java.lang.String, java.lang.Object)">transform</a></span>(MuleContext muleContext, MuleEvent event, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> expectedType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> expectedMimeType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#transform(org.mule.api.MuleContext, org.mule.api.MuleEvent, java.lang.reflect.Type, java.lang.String, java.lang.Object)">transform</a></span>(MuleContext muleContext, MuleEvent event, Type expectedType, String expectedMimeType, Object source)</nobr>
         
   </td></tr>
 
@@ -1023,10 +1044,10 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#transform(org.mule.api.MuleMessage, java.lang.reflect.Type, java.lang.Object)">transform</a></span>(MuleMessage muleMessage, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> expectedType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#transform(org.mule.api.MuleMessage, java.lang.reflect.Type, java.lang.Object)">transform</a></span>(MuleMessage muleMessage, Type expectedType, Object source)</nobr>
         
   </td></tr>
 
@@ -1046,7 +1067,7 @@ From class
           class="jd-expando-trigger-img" /></a>
 From class
 
-  <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a>
+  java.lang.Object
 
 <div id="inherited-methods-java.lang.Object">
   <div id="inherited-methods-java.lang.Object-list"
@@ -1065,7 +1086,7 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">clone</span>()</nobr>
@@ -1084,7 +1105,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">equals</span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        <span class="sympad">equals</span>(Object arg0)</nobr>
         
   </td></tr>
 
@@ -1113,7 +1134,7 @@ From class
             final
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
+            Class&lt;?&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">getClass</span>()</nobr>
@@ -1177,7 +1198,7 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">toString</span>()</nobr>
@@ -1585,7 +1606,7 @@ From interface
         void
       </span>
       <span class="sympad">overwritePayload</span>
-      <span class="normal">(MuleEvent event, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> resultPayload)</span>
+      <span class="normal">(MuleEvent event, Object resultPayload)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1617,7 +1638,7 @@ From interface
       <h5 class="jd-tagtitle">Throws</h5>
       <table class="jd-tagtable">  
         <tr>
-            <th><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Exception.html">Exception</a></td>
+            <th>Exception</td>
             <td></td>
         </tr>
       </table>
@@ -1772,7 +1793,7 @@ From interface
         O
       </span>
       <span class="sympad">findOrCreate</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a> moduleClass, boolean shouldAutoCreate, MuleEvent muleEvent)</span>
+      <span class="normal">(Class moduleClass, boolean shouldAutoCreate, MuleEvent muleEvent)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1814,11 +1835,11 @@ From interface
             <td></td>
         </tr>  
         <tr>
-            <th><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/IllegalAccessException.html">IllegalAccessException</a></td>
+            <th>IllegalAccessException</td>
             <td></td>
         </tr>  
         <tr>
-            <th><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/InstantiationException.html">InstantiationException</a></td>
+            <th>InstantiationException</td>
             <td></td>
         </tr>
       </table>

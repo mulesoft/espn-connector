@@ -69,7 +69,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <meta name="description" content="Documentation for ESPN Connector." />
+  <meta name="description" content="Documentation for Mule ESPN Cloud Connector." />
 
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico" />
 <title>
@@ -77,7 +77,7 @@
   GetAthletesNewsMessageProcessor
 
 
-| ESPN Connector
+| Mule ESPN Cloud Connector
 
 </title>
 <link href="../../../../../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
@@ -120,7 +120,7 @@
   feedback_widget_options.color = "#2F74AE";
   feedback_widget_options.style = "question";
 
-  feedback_widget_options.tag = "ESPN Connector";
+  feedback_widget_options.tag = "Mule ESPN Cloud Connector";
 
   feedback_widget_options.limit = "3";
 
@@ -133,7 +133,7 @@
 <div id="header">
     <div id="headerLeft">
     
-      <span id="masthead-title">ESPN Connector</span>
+      <span id="masthead-title">Mule ESPN Cloud Connector</span>
     
     <ul id="header-tabs" class="">
     
@@ -228,6 +228,9 @@
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/AbstractMessageProcessor.html">AbstractMessageProcessor</a>&lt;O&gt;</li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetAthletesMessageProcessor.html">GetAthletesMessageProcessor</a></li>
           <li class="selected api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetAthletesNewsMessageProcessor.html">GetAthletesNewsMessageProcessor</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetEspnNowMessageProcessor.html">GetEspnNowMessageProcessor</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetEspnNowPopularMessageProcessor.html">GetEspnNowPopularMessageProcessor</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetEspnNowTopMessageProcessor.html">GetEspnNowTopMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetNewsByIdMessageProcessor.html">GetNewsByIdMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetNewsHeadlinesMessageProcessor.html">GetNewsHeadlinesMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetNewsHeadlinesTopMessageProcessor.html">GetNewsHeadlinesTopMessageProcessor</a></li>
@@ -463,7 +466,7 @@ Summary:
 
     <tr>
         
-        <td colspan="4" class="jd-inheritance-class-cell"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a></td>
+        <td colspan="4" class="jd-inheritance-class-cell">java.lang.Object</td>
     </tr>
     
 
@@ -509,7 +512,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>GetAthletesNewsMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/espnConnector.html#getAthletesNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getAthletesNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/espnConnector.html">espnConnector</a></code>. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
+<p>GetAthletesNewsMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getAthletesNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getAthletesNews(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
  
 </p>
 
@@ -588,7 +591,7 @@ org.mule.api.lifecycle.Disposable
 
     
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></td>
+        <td class="jd-typecol">String</td>
         <td class="jd-linkcol">PHASE_NAME</td>
         <td class="jd-descrcol" width="100%"></td>
     </tr>
@@ -619,7 +622,7 @@ org.mule.api.lifecycle.Initialisable
 
     
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></td>
+        <td class="jd-typecol">String</td>
         <td class="jd-linkcol">PHASE_NAME</td>
         <td class="jd-descrcol" width="100%"></td>
     </tr>
@@ -650,7 +653,7 @@ org.mule.api.lifecycle.Startable
 
     
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></td>
+        <td class="jd-typecol">String</td>
         <td class="jd-linkcol">PHASE_NAME</td>
         <td class="jd-descrcol" width="100%"></td>
     </tr>
@@ -681,7 +684,7 @@ org.mule.api.lifecycle.Stoppable
 
     
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></td>
+        <td class="jd-typecol">String</td>
         <td class="jd-linkcol">PHASE_NAME</td>
         <td class="jd-descrcol" width="100%"></td>
     </tr>
@@ -710,7 +713,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
+          String</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#_acceptType">_acceptType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -721,7 +724,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
+          String</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#_athleteIdType">_athleteIdType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -732,7 +735,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
+          String</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#_datesType">_datesType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -743,7 +746,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
+          String</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#_insiderType">_insiderType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -754,7 +757,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
+          String</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#_languageType">_languageType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -765,7 +768,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
+          String</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#_limitType">_limitType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -776,7 +779,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
+          String</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#_offsetType">_offsetType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -787,7 +790,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
+          String</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#_resourceType">_resourceType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -798,7 +801,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
+          Object</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#accept">accept</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -809,7 +812,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
+          Object</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#athleteId">athleteId</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -820,7 +823,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
+          Object</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#dates">dates</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -831,7 +834,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
+          Object</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#insider">insider</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -842,7 +845,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
+          Object</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#language">language</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -853,7 +856,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
+          Object</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#limit">limit</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -864,7 +867,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
+          Object</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#offset">offset</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -875,7 +878,7 @@ org.mule.api.lifecycle.Stoppable
           protected
           
           
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
+          Object</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#resource">resource</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -1076,7 +1079,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setAccept(java.lang.Object)">setAccept</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setAccept(java.lang.Object)">setAccept</a></span>(Object value)</nobr>
         
         <div class="jd-descrdiv">Sets accept</div>
   
@@ -1094,7 +1097,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setAthleteId(java.lang.Object)">setAthleteId</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setAthleteId(java.lang.Object)">setAthleteId</a></span>(Object value)</nobr>
         
         <div class="jd-descrdiv">Sets athleteId</div>
   
@@ -1112,7 +1115,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setDates(java.lang.Object)">setDates</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setDates(java.lang.Object)">setDates</a></span>(Object value)</nobr>
         
         <div class="jd-descrdiv">Sets dates</div>
   
@@ -1148,7 +1151,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setInsider(java.lang.Object)">setInsider</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setInsider(java.lang.Object)">setInsider</a></span>(Object value)</nobr>
         
         <div class="jd-descrdiv">Sets insider</div>
   
@@ -1166,7 +1169,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setLanguage(java.lang.Object)">setLanguage</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setLanguage(java.lang.Object)">setLanguage</a></span>(Object value)</nobr>
         
         <div class="jd-descrdiv">Sets language</div>
   
@@ -1184,7 +1187,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setLimit(java.lang.Object)">setLimit</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setLimit(java.lang.Object)">setLimit</a></span>(Object value)</nobr>
         
         <div class="jd-descrdiv">Sets limit</div>
   
@@ -1220,7 +1223,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setOffset(java.lang.Object)">setOffset</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setOffset(java.lang.Object)">setOffset</a></span>(Object value)</nobr>
         
         <div class="jd-descrdiv">Sets offset</div>
   
@@ -1238,7 +1241,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setResource(java.lang.Object)">setResource</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetAthletesNewsMessageProcessor.html#setResource(java.lang.Object)">setResource</a></span>(Object value)</nobr>
         
         <div class="jd-descrdiv">Sets resource</div>
   
@@ -1322,7 +1325,7 @@ From class
             O</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractMessageProcessor.html#findOrCreate(java.lang.Class, boolean, org.mule.api.MuleEvent)">findOrCreate</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a> moduleClass, boolean shouldAutoCreate, MuleEvent muleEvent)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractMessageProcessor.html#findOrCreate(java.lang.Class, boolean, org.mule.api.MuleEvent)">findOrCreate</a></span>(Class moduleClass, boolean shouldAutoCreate, MuleEvent muleEvent)</nobr>
         
         <div class="jd-descrdiv">Obtains the expression manager from the Mule context and initialises the connector.</div>
   
@@ -1380,7 +1383,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractMessageProcessor.html#overwritePayload(org.mule.api.MuleEvent, java.lang.Object)">overwritePayload</a></span>(MuleEvent event, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> resultPayload)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractMessageProcessor.html#overwritePayload(org.mule.api.MuleEvent, java.lang.Object)">overwritePayload</a></span>(MuleEvent event, Object resultPayload)</nobr>
         
         <div class="jd-descrdiv">Overwrites the event payload with the specified one
  
@@ -1480,7 +1483,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#computeClassHierarchy(java.lang.Class, java.util.List)">computeClassHierarchy</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a> clazz, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a> classes)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#computeClassHierarchy(java.lang.Class, java.util.List)">computeClassHierarchy</a></span>(Class clazz, List classes)</nobr>
         
         <div class="jd-descrdiv">Get all superclasses and interfaces recursively.</div>
   
@@ -1495,10 +1498,10 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#evaluate(org.mule.util.TemplateParser.PatternInfo, org.mule.api.expression.ExpressionManager, org.mule.api.MuleMessage, java.lang.Object)">evaluate</a></span>(TemplateParser.PatternInfo patternInfo, ExpressionManager expressionManager, MuleMessage muleMessage, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#evaluate(org.mule.util.TemplateParser.PatternInfo, org.mule.api.expression.ExpressionManager, org.mule.api.MuleMessage, java.lang.Object)">evaluate</a></span>(TemplateParser.PatternInfo patternInfo, ExpressionManager expressionManager, MuleMessage muleMessage, Object source)</nobr>
         
   </td></tr>
 
@@ -1511,10 +1514,10 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#evaluateAndTransform(org.mule.api.MuleContext, org.mule.api.MuleMessage, java.lang.reflect.Type, java.lang.String, java.lang.Object)">evaluateAndTransform</a></span>(MuleContext muleContext, MuleMessage muleMessage, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> expectedType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> expectedMimeType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#evaluateAndTransform(org.mule.api.MuleContext, org.mule.api.MuleMessage, java.lang.reflect.Type, java.lang.String, java.lang.Object)">evaluateAndTransform</a></span>(MuleContext muleContext, MuleMessage muleMessage, Type expectedType, String expectedMimeType, Object source)</nobr>
         
   </td></tr>
 
@@ -1527,10 +1530,10 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#evaluateAndTransform(org.mule.api.MuleContext, org.mule.api.MuleEvent, java.lang.reflect.Type, java.lang.String, java.lang.Object)">evaluateAndTransform</a></span>(MuleContext muleContext, MuleEvent event, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> expectedType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> expectedMimeType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#evaluateAndTransform(org.mule.api.MuleContext, org.mule.api.MuleEvent, java.lang.reflect.Type, java.lang.String, java.lang.Object)">evaluateAndTransform</a></span>(MuleContext muleContext, MuleEvent event, Type expectedType, String expectedMimeType, Object source)</nobr>
         
   </td></tr>
 
@@ -1546,7 +1549,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isAssignableFrom(java.lang.reflect.Type, java.lang.Class)">isAssignableFrom</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> expectedType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a> clazz)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isAssignableFrom(java.lang.reflect.Type, java.lang.Class)">isAssignableFrom</a></span>(Type expectedType, Class clazz)</nobr>
         
   </td></tr>
 
@@ -1562,7 +1565,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isList(java.lang.reflect.Type)">isList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> type)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isList(java.lang.reflect.Type)">isList</a></span>(Type type)</nobr>
         
   </td></tr>
 
@@ -1578,9 +1581,9 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isListClass(java.lang.Class)">isListClass</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a> clazz)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isListClass(java.lang.Class)">isListClass</a></span>(Class clazz)</nobr>
         
-        <div class="jd-descrdiv">Checks whether the specified class parameter is an instance of <code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a></code></div>
+        <div class="jd-descrdiv">Checks whether the specified class parameter is an instance of List</div>
   
   </td></tr>
 
@@ -1596,7 +1599,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isMap(java.lang.reflect.Type)">isMap</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> type)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isMap(java.lang.reflect.Type)">isMap</a></span>(Type type)</nobr>
         
   </td></tr>
 
@@ -1612,9 +1615,9 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isMapClass(java.lang.Class)">isMapClass</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a> clazz)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#isMapClass(java.lang.Class)">isMapClass</a></span>(Class clazz)</nobr>
         
-        <div class="jd-descrdiv">Checks whether the specified class parameter is an instance of <code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a></code></div>
+        <div class="jd-descrdiv">Checks whether the specified class parameter is an instance of Map</div>
   
   </td></tr>
 
@@ -1627,10 +1630,10 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#transform(org.mule.api.MuleContext, org.mule.api.MuleMessage, java.lang.reflect.Type, java.lang.String, java.lang.Object)">transform</a></span>(MuleContext muleContext, MuleMessage message, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> expectedType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> expectedMimeType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#transform(org.mule.api.MuleContext, org.mule.api.MuleMessage, java.lang.reflect.Type, java.lang.String, java.lang.Object)">transform</a></span>(MuleContext muleContext, MuleMessage message, Type expectedType, String expectedMimeType, Object source)</nobr>
         
   </td></tr>
 
@@ -1643,10 +1646,10 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#transform(org.mule.api.MuleContext, org.mule.api.MuleEvent, java.lang.reflect.Type, java.lang.String, java.lang.Object)">transform</a></span>(MuleContext muleContext, MuleEvent event, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> expectedType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> expectedMimeType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#transform(org.mule.api.MuleContext, org.mule.api.MuleEvent, java.lang.reflect.Type, java.lang.String, java.lang.Object)">transform</a></span>(MuleContext muleContext, MuleEvent event, Type expectedType, String expectedMimeType, Object source)</nobr>
         
   </td></tr>
 
@@ -1659,10 +1662,10 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#transform(org.mule.api.MuleMessage, java.lang.reflect.Type, java.lang.Object)">transform</a></span>(MuleMessage muleMessage, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/reflect/Type.html">Type</a> expectedType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/AbstractExpressionEvaluator.html#transform(org.mule.api.MuleMessage, java.lang.reflect.Type, java.lang.Object)">transform</a></span>(MuleMessage muleMessage, Type expectedType, Object source)</nobr>
         
   </td></tr>
 
@@ -1682,7 +1685,7 @@ From class
           class="jd-expando-trigger-img" /></a>
 From class
 
-  <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a>
+  java.lang.Object
 
 <div id="inherited-methods-java.lang.Object">
   <div id="inherited-methods-java.lang.Object-list"
@@ -1701,7 +1704,7 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">clone</span>()</nobr>
@@ -1720,7 +1723,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">equals</span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        <span class="sympad">equals</span>(Object arg0)</nobr>
         
   </td></tr>
 
@@ -1749,7 +1752,7 @@ From class
             final
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
+            Class&lt;?&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">getClass</span>()</nobr>
@@ -1813,7 +1816,7 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">toString</span>()</nobr>
@@ -2209,7 +2212,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        String
       </span>
         _acceptType
     </h4>
@@ -2239,7 +2242,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        String
       </span>
         _athleteIdType
     </h4>
@@ -2269,7 +2272,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        String
       </span>
         _datesType
     </h4>
@@ -2299,7 +2302,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        String
       </span>
         _insiderType
     </h4>
@@ -2329,7 +2332,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        String
       </span>
         _languageType
     </h4>
@@ -2359,7 +2362,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        String
       </span>
         _limitType
     </h4>
@@ -2389,7 +2392,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        String
       </span>
         _offsetType
     </h4>
@@ -2419,7 +2422,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        String
       </span>
         _resourceType
     </h4>
@@ -2449,7 +2452,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
+        Object
       </span>
         accept
     </h4>
@@ -2479,7 +2482,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
+        Object
       </span>
         athleteId
     </h4>
@@ -2509,7 +2512,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
+        Object
       </span>
         dates
     </h4>
@@ -2539,7 +2542,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
+        Object
       </span>
         insider
     </h4>
@@ -2569,7 +2572,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
+        Object
       </span>
         language
     </h4>
@@ -2599,7 +2602,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
+        Object
       </span>
         limit
     </h4>
@@ -2629,7 +2632,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
+        Object
       </span>
         offset
     </h4>
@@ -2659,7 +2662,7 @@ From interface
         protected 
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
+        Object
       </span>
         resource
     </h4>
@@ -2869,7 +2872,7 @@ From interface
         void
       </span>
       <span class="sympad">setAccept</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
+      <span class="normal">(Object value)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -2910,7 +2913,7 @@ From interface
         void
       </span>
       <span class="sympad">setAthleteId</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
+      <span class="normal">(Object value)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -2951,7 +2954,7 @@ From interface
         void
       </span>
       <span class="sympad">setDates</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
+      <span class="normal">(Object value)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -3033,7 +3036,7 @@ From interface
         void
       </span>
       <span class="sympad">setInsider</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
+      <span class="normal">(Object value)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -3074,7 +3077,7 @@ From interface
         void
       </span>
       <span class="sympad">setLanguage</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
+      <span class="normal">(Object value)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -3115,7 +3118,7 @@ From interface
         void
       </span>
       <span class="sympad">setLimit</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
+      <span class="normal">(Object value)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -3197,7 +3200,7 @@ From interface
         void
       </span>
       <span class="sympad">setOffset</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
+      <span class="normal">(Object value)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -3238,7 +3241,7 @@ From interface
         void
       </span>
       <span class="sympad">setResource</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</span>
+      <span class="normal">(Object value)</span>
     </h4>
       <div class="api-level">
         <div>

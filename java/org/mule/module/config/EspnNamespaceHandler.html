@@ -69,7 +69,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <meta name="description" content="Documentation for ESPN Connector." />
+  <meta name="description" content="Documentation for Mule ESPN Cloud Connector." />
 
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico" />
 <title>
@@ -77,7 +77,7 @@
   EspnNamespaceHandler
 
 
-| ESPN Connector
+| Mule ESPN Cloud Connector
 
 </title>
 <link href="../../../../../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
@@ -120,7 +120,7 @@
   feedback_widget_options.color = "#2F74AE";
   feedback_widget_options.style = "question";
 
-  feedback_widget_options.tag = "ESPN Connector";
+  feedback_widget_options.tag = "Mule ESPN Cloud Connector";
 
   feedback_widget_options.limit = "3";
 
@@ -133,7 +133,7 @@
 <div id="header">
     <div id="headerLeft">
     
-      <span id="masthead-title">ESPN Connector</span>
+      <span id="masthead-title">Mule ESPN Cloud Connector</span>
     
     <ul id="header-tabs" class="">
     
@@ -229,10 +229,13 @@
     <li><h2>Classes</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/AbstractDefinitionParser.html">AbstractDefinitionParser</a></li>
-          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/espnConnectorConfigDefinitionParser.html">espnConnectorConfigDefinitionParser</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/EspnConnectorConfigDefinitionParser.html">EspnConnectorConfigDefinitionParser</a></li>
           <li class="selected api apilevel-"><a href="../../../../../java/org/mule/module/config/EspnNamespaceHandler.html">EspnNamespaceHandler</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetAthletesDefinitionParser.html">GetAthletesDefinitionParser</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetAthletesNewsDefinitionParser.html">GetAthletesNewsDefinitionParser</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetEspnNowDefinitionParser.html">GetEspnNowDefinitionParser</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetEspnNowPopularDefinitionParser.html">GetEspnNowPopularDefinitionParser</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetEspnNowTopDefinitionParser.html">GetEspnNowTopDefinitionParser</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetNewsByIdDefinitionParser.html">GetNewsByIdDefinitionParser</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetNewsDefinitionParser.html">GetNewsDefinitionParser</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetNewsHeadlinesDefinitionParser.html">GetNewsHeadlinesDefinitionParser</a></li>
@@ -388,7 +391,7 @@ Summary:
 
     <tr>
         
-        <td colspan="3" class="jd-inheritance-class-cell"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a></td>
+        <td colspan="3" class="jd-inheritance-class-cell">java.lang.Object</td>
     </tr>
     
 
@@ -500,7 +503,7 @@ org.springframework.beans.factory.xml.NamespaceHandlerSupport
           private
           
           final
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>,&nbsp;BeanDefinitionDecorator&gt;</nobr></td>
+          Map&lt;String,&nbsp;BeanDefinitionDecorator&gt;</nobr></td>
           <td class="jd-linkcol">attributeDecorators</td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -511,7 +514,7 @@ org.springframework.beans.factory.xml.NamespaceHandlerSupport
           private
           
           final
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>,&nbsp;BeanDefinitionDecorator&gt;</nobr></td>
+          Map&lt;String,&nbsp;BeanDefinitionDecorator&gt;</nobr></td>
           <td class="jd-linkcol">decorators</td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -522,7 +525,7 @@ org.springframework.beans.factory.xml.NamespaceHandlerSupport
           private
           
           final
-          <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>,&nbsp;BeanDefinitionParser&gt;</nobr></td>
+          Map&lt;String,&nbsp;BeanDefinitionParser&gt;</nobr></td>
           <td class="jd-linkcol">parsers</td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -672,7 +675,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">registerBeanDefinitionDecorator</span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> arg0, BeanDefinitionDecorator arg1)</nobr>
+        <span class="sympad">registerBeanDefinitionDecorator</span>(String arg0, BeanDefinitionDecorator arg1)</nobr>
         
   </td></tr>
 
@@ -688,7 +691,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">registerBeanDefinitionDecoratorForAttribute</span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> arg0, BeanDefinitionDecorator arg1)</nobr>
+        <span class="sympad">registerBeanDefinitionDecoratorForAttribute</span>(String arg0, BeanDefinitionDecorator arg1)</nobr>
         
   </td></tr>
 
@@ -704,7 +707,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">registerBeanDefinitionParser</span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> arg0, BeanDefinitionParser arg1)</nobr>
+        <span class="sympad">registerBeanDefinitionParser</span>(String arg0, BeanDefinitionParser arg1)</nobr>
         
   </td></tr>
 
@@ -724,7 +727,7 @@ From class
           class="jd-expando-trigger-img" /></a>
 From class
 
-  <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a>
+  java.lang.Object
 
 <div id="inherited-methods-java.lang.Object">
   <div id="inherited-methods-java.lang.Object-list"
@@ -743,7 +746,7 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            Object</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">clone</span>()</nobr>
@@ -762,7 +765,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">equals</span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        <span class="sympad">equals</span>(Object arg0)</nobr>
         
   </td></tr>
 
@@ -791,7 +794,7 @@ From class
             final
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
+            Class&lt;?&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">getClass</span>()</nobr>
@@ -855,7 +858,7 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">toString</span>()</nobr>

@@ -1,7 +1,7 @@
 <api>
 <package name="org.mule.module"
 >
-<class name="espnConnector"
+<class name="EspnConnector"
  extends="java.lang.Object"
  abstract="true"
  static="false"
@@ -9,8 +9,8 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<constructor name="espnConnector"
- type="org.mule.module.espnConnector"
+<constructor name="EspnConnector"
+ type="org.mule.module.EspnConnector"
  static="false"
  final="false"
  deprecated="not deprecated"
@@ -90,6 +90,75 @@
 <exception name="IOException" type="java.io.IOException">
 </exception>
 </method>
+<method name="getEspnNow"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="leagues" type="java.lang.String">
+</parameter>
+<parameter name="teams" type="java.lang.String">
+</parameter>
+<parameter name="content" type="java.lang.String">
+</parameter>
+<parameter name="disable" type="java.lang.String">
+</parameter>
+<parameter name="limit" type="java.lang.String">
+</parameter>
+<parameter name="offset" type="java.lang.String">
+</parameter>
+<parameter name="accept" type="java.lang.String">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method name="getEspnNowPopular"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="disable" type="java.lang.String">
+</parameter>
+<parameter name="limit" type="java.lang.String">
+</parameter>
+<parameter name="offset" type="java.lang.String">
+</parameter>
+<parameter name="accept" type="java.lang.String">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method name="getEspnNowTop"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="disable" type="java.lang.String">
+</parameter>
+<parameter name="limit" type="java.lang.String">
+</parameter>
+<parameter name="offset" type="java.lang.String">
+</parameter>
+<parameter name="accept" type="java.lang.String">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
 <method name="getHttpClient"
  return="org.apache.commons.httpclient.HttpClient"
  abstract="false"
@@ -141,8 +210,6 @@
 <parameter name="resource" type="java.lang.String">
 </parameter>
 <parameter name="newsId" type="java.lang.String">
-</parameter>
-<parameter name="dates" type="java.lang.String">
 </parameter>
 <parameter name="insider" type="java.lang.String">
 </parameter>
@@ -352,11 +419,22 @@
 <parameter name="httpClient" type="org.apache.commons.httpclient.HttpClient">
 </parameter>
 </method>
+<field name="API_VERSION"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;v1&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
 <field name="BASE_URI"
  type="java.lang.String"
  transient="false"
  volatile="false"
- value="&quot;http://api.espn.com/v1&quot;"
+ value="&quot;http://api.espn.com/&quot;"
  static="true"
  final="true"
  deprecated="not deprecated"
@@ -387,16 +465,16 @@
 </package>
 <package name="org.mule.module.adapters"
 >
-<class name="espnConnectorCapabilitiesAdapter"
- extends="org.mule.module.espnConnector"
+<class name="EspnConnectorCapabilitiesAdapter"
+ extends="org.mule.module.EspnConnector"
  abstract="true"
  static="false"
  final="false"
  deprecated="not deprecated"
  visibility="public"
 >
-<constructor name="espnConnectorCapabilitiesAdapter"
- type="org.mule.module.adapters.espnConnectorCapabilitiesAdapter"
+<constructor name="EspnConnectorCapabilitiesAdapter"
+ type="org.mule.module.adapters.EspnConnectorCapabilitiesAdapter"
  static="false"
  final="false"
  deprecated="not deprecated"
@@ -417,8 +495,8 @@
 </parameter>
 </method>
 </class>
-<class name="espnConnectorLifecycleAdapter"
- extends="org.mule.module.adapters.espnConnectorMetadataAdapater"
+<class name="EspnConnectorLifecycleAdapter"
+ extends="org.mule.module.adapters.EspnConnectorMetadataAdapater"
  abstract="true"
  static="false"
  final="false"
@@ -427,8 +505,8 @@
 >
 <implements name="org.mule.api.lifecycle.Initialisable">
 </implements>
-<constructor name="espnConnectorLifecycleAdapter"
- type="org.mule.module.adapters.espnConnectorLifecycleAdapter"
+<constructor name="EspnConnectorLifecycleAdapter"
+ type="org.mule.module.adapters.EspnConnectorLifecycleAdapter"
  static="false"
  final="false"
  deprecated="not deprecated"
@@ -486,16 +564,16 @@
 </exception>
 </method>
 </class>
-<class name="espnConnectorMetadataAdapater"
- extends="org.mule.module.adapters.espnConnectorCapabilitiesAdapter"
+<class name="EspnConnectorMetadataAdapater"
+ extends="org.mule.module.adapters.EspnConnectorCapabilitiesAdapter"
  abstract="true"
  static="false"
  final="false"
  deprecated="not deprecated"
  visibility="public"
 >
-<constructor name="espnConnectorMetadataAdapater"
- type="org.mule.module.adapters.espnConnectorMetadataAdapater"
+<constructor name="EspnConnectorMetadataAdapater"
+ type="org.mule.module.adapters.EspnConnectorMetadataAdapater"
  static="false"
  final="false"
  deprecated="not deprecated"
@@ -572,7 +650,7 @@
  type="java.lang.String"
  transient="false"
  volatile="false"
- value="&quot;espn&quot;"
+ value="&quot;ESPN&quot;"
  static="true"
  final="true"
  deprecated="not deprecated"
@@ -583,7 +661,7 @@
  type="java.lang.String"
  transient="false"
  volatile="false"
- value="&quot;1.0-SNAPSHOT&quot;"
+ value="&quot;1.1-SNAPSHOT&quot;"
  static="true"
  final="true"
  deprecated="not deprecated"
@@ -591,16 +669,16 @@
 >
 </field>
 </class>
-<class name="espnConnectorProcessAdapter"
- extends="org.mule.module.adapters.espnConnectorLifecycleAdapter"
+<class name="EspnConnectorProcessAdapter"
+ extends="org.mule.module.adapters.EspnConnectorLifecycleAdapter"
  abstract="true"
  static="false"
  final="false"
  deprecated="not deprecated"
  visibility="public"
 >
-<constructor name="espnConnectorProcessAdapter"
- type="org.mule.module.adapters.espnConnectorProcessAdapter"
+<constructor name="EspnConnectorProcessAdapter"
+ type="org.mule.module.adapters.EspnConnectorProcessAdapter"
  static="false"
  final="false"
  deprecated="not deprecated"
@@ -608,7 +686,7 @@
 >
 </constructor>
 <method name="getProcessTemplate"
- return="org.mule.api.process.ProcessTemplate&lt;P, org.mule.module.adapters.espnConnectorCapabilitiesAdapter&gt;"
+ return="org.mule.api.process.ProcessTemplate&lt;P, org.mule.module.adapters.EspnConnectorCapabilitiesAdapter&gt;"
  abstract="false"
  native="false"
  synchronized="false"
@@ -619,8 +697,8 @@
 >
 </method>
 </class>
-<class name="espnConnectorRestClientAdapter"
- extends="org.mule.module.adapters.espnConnectorProcessAdapter"
+<class name="EspnConnectorRestClientAdapter"
+ extends="org.mule.module.adapters.EspnConnectorProcessAdapter"
  abstract="false"
  static="false"
  final="false"
@@ -629,8 +707,8 @@
 >
 <implements name="org.mule.api.lifecycle.Initialisable">
 </implements>
-<constructor name="espnConnectorRestClientAdapter"
- type="org.mule.module.adapters.espnConnectorRestClientAdapter"
+<constructor name="EspnConnectorRestClientAdapter"
+ type="org.mule.module.adapters.EspnConnectorRestClientAdapter"
  static="false"
  final="false"
  deprecated="not deprecated"
@@ -699,6 +777,75 @@
 <exception name="IOException" type="java.io.IOException">
 </exception>
 </method>
+<method name="getEspnNow"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="leagues" type="java.lang.String">
+</parameter>
+<parameter name="teams" type="java.lang.String">
+</parameter>
+<parameter name="content" type="java.lang.String">
+</parameter>
+<parameter name="disable" type="java.lang.String">
+</parameter>
+<parameter name="limit" type="java.lang.String">
+</parameter>
+<parameter name="offset" type="java.lang.String">
+</parameter>
+<parameter name="accept" type="java.lang.String">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method name="getEspnNowPopular"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="disable" type="java.lang.String">
+</parameter>
+<parameter name="limit" type="java.lang.String">
+</parameter>
+<parameter name="offset" type="java.lang.String">
+</parameter>
+<parameter name="accept" type="java.lang.String">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method name="getEspnNowTop"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="disable" type="java.lang.String">
+</parameter>
+<parameter name="limit" type="java.lang.String">
+</parameter>
+<parameter name="offset" type="java.lang.String">
+</parameter>
+<parameter name="accept" type="java.lang.String">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
 <method name="getNews"
  return="java.lang.String"
  abstract="false"
@@ -739,8 +886,6 @@
 <parameter name="resource" type="java.lang.String">
 </parameter>
 <parameter name="newsId" type="java.lang.String">
-</parameter>
-<parameter name="dates" type="java.lang.String">
 </parameter>
 <parameter name="insider" type="java.lang.String">
 </parameter>
@@ -1829,6 +1974,38 @@
 </parameter>
 </method>
 </interface>
+<class name="EspnConnectorConfigDefinitionParser"
+ extends="org.mule.module.config.AbstractDefinitionParser"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="EspnConnectorConfigDefinitionParser"
+ type="org.mule.module.config.EspnConnectorConfigDefinitionParser"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="parse"
+ return="org.springframework.beans.factory.config.BeanDefinition"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="element" type="org.w3c.dom.Element">
+</parameter>
+<parameter name="parserContext" type="org.springframework.beans.factory.xml.ParserContext">
+</parameter>
+</method>
+</class>
 <class name="EspnNamespaceHandler"
  extends="org.springframework.beans.factory.xml.NamespaceHandlerSupport"
  abstract="false"
@@ -1899,6 +2076,102 @@
 >
 <constructor name="GetAthletesNewsDefinitionParser"
  type="org.mule.module.config.GetAthletesNewsDefinitionParser"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="parse"
+ return="org.springframework.beans.factory.config.BeanDefinition"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="element" type="org.w3c.dom.Element">
+</parameter>
+<parameter name="parserContext" type="org.springframework.beans.factory.xml.ParserContext">
+</parameter>
+</method>
+</class>
+<class name="GetEspnNowDefinitionParser"
+ extends="org.mule.module.config.AbstractDefinitionParser"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="GetEspnNowDefinitionParser"
+ type="org.mule.module.config.GetEspnNowDefinitionParser"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="parse"
+ return="org.springframework.beans.factory.config.BeanDefinition"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="element" type="org.w3c.dom.Element">
+</parameter>
+<parameter name="parserContext" type="org.springframework.beans.factory.xml.ParserContext">
+</parameter>
+</method>
+</class>
+<class name="GetEspnNowPopularDefinitionParser"
+ extends="org.mule.module.config.AbstractDefinitionParser"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="GetEspnNowPopularDefinitionParser"
+ type="org.mule.module.config.GetEspnNowPopularDefinitionParser"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="parse"
+ return="org.springframework.beans.factory.config.BeanDefinition"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="element" type="org.w3c.dom.Element">
+</parameter>
+<parameter name="parserContext" type="org.springframework.beans.factory.xml.ParserContext">
+</parameter>
+</method>
+</class>
+<class name="GetEspnNowTopDefinitionParser"
+ extends="org.mule.module.config.AbstractDefinitionParser"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="GetEspnNowTopDefinitionParser"
+ type="org.mule.module.config.GetEspnNowTopDefinitionParser"
  static="false"
  final="false"
  deprecated="not deprecated"
@@ -2187,38 +2460,6 @@
 >
 <constructor name="GetTeamsNewsDefinitionParser"
  type="org.mule.module.config.GetTeamsNewsDefinitionParser"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-</constructor>
-<method name="parse"
- return="org.springframework.beans.factory.config.BeanDefinition"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="element" type="org.w3c.dom.Element">
-</parameter>
-<parameter name="parserContext" type="org.springframework.beans.factory.xml.ParserContext">
-</parameter>
-</method>
-</class>
-<class name="espnConnectorConfigDefinitionParser"
- extends="org.mule.module.config.AbstractDefinitionParser"
- abstract="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<constructor name="espnConnectorConfigDefinitionParser"
- type="org.mule.module.config.espnConnectorConfigDefinitionParser"
  static="false"
  final="false"
  deprecated="not deprecated"
@@ -3722,6 +3963,759 @@
 >
 </field>
 </class>
+<class name="GetEspnNowMessageProcessor"
+ extends="org.mule.module.processors.AbstractMessageProcessor"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="org.mule.api.lifecycle.Initialisable">
+</implements>
+<implements name="org.mule.api.processor.MessageProcessor">
+</implements>
+<constructor name="GetEspnNowMessageProcessor"
+ type="org.mule.module.processors.GetEspnNowMessageProcessor"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="dispose"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="initialise"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="InitialisationException" type="org.mule.api.lifecycle.InitialisationException">
+</exception>
+</method>
+<method name="process"
+ return="org.mule.api.MuleEvent"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="event" type="org.mule.api.MuleEvent">
+</parameter>
+<exception name="MuleException" type="org.mule.api.MuleException">
+</exception>
+</method>
+<method name="setAccept"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="setContent"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="setDisable"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="setLeagues"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="setLimit"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="setOffset"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="setTeams"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="start"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="MuleException" type="org.mule.api.MuleException">
+</exception>
+</method>
+<method name="stop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="MuleException" type="org.mule.api.MuleException">
+</exception>
+</method>
+<field name="_acceptType"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="_contentType"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="_disableType"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="_leaguesType"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="_limitType"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="_offsetType"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="_teamsType"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="accept"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="content"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="disable"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="leagues"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="limit"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="offset"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="teams"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="GetEspnNowPopularMessageProcessor"
+ extends="org.mule.module.processors.AbstractMessageProcessor"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="org.mule.api.lifecycle.Initialisable">
+</implements>
+<implements name="org.mule.api.processor.MessageProcessor">
+</implements>
+<constructor name="GetEspnNowPopularMessageProcessor"
+ type="org.mule.module.processors.GetEspnNowPopularMessageProcessor"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="dispose"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="initialise"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="InitialisationException" type="org.mule.api.lifecycle.InitialisationException">
+</exception>
+</method>
+<method name="process"
+ return="org.mule.api.MuleEvent"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="event" type="org.mule.api.MuleEvent">
+</parameter>
+<exception name="MuleException" type="org.mule.api.MuleException">
+</exception>
+</method>
+<method name="setAccept"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="setDisable"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="setLimit"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="setOffset"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="start"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="MuleException" type="org.mule.api.MuleException">
+</exception>
+</method>
+<method name="stop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="MuleException" type="org.mule.api.MuleException">
+</exception>
+</method>
+<field name="_acceptType"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="_disableType"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="_limitType"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="_offsetType"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="accept"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="disable"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="limit"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="offset"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="GetEspnNowTopMessageProcessor"
+ extends="org.mule.module.processors.AbstractMessageProcessor"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="org.mule.api.lifecycle.Initialisable">
+</implements>
+<implements name="org.mule.api.processor.MessageProcessor">
+</implements>
+<constructor name="GetEspnNowTopMessageProcessor"
+ type="org.mule.module.processors.GetEspnNowTopMessageProcessor"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="dispose"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="initialise"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="InitialisationException" type="org.mule.api.lifecycle.InitialisationException">
+</exception>
+</method>
+<method name="process"
+ return="org.mule.api.MuleEvent"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="event" type="org.mule.api.MuleEvent">
+</parameter>
+<exception name="MuleException" type="org.mule.api.MuleException">
+</exception>
+</method>
+<method name="setAccept"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="setDisable"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="setLimit"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="setOffset"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.Object">
+</parameter>
+</method>
+<method name="start"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="MuleException" type="org.mule.api.MuleException">
+</exception>
+</method>
+<method name="stop"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<exception name="MuleException" type="org.mule.api.MuleException">
+</exception>
+</method>
+<field name="_acceptType"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="_disableType"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="_limitType"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="_offsetType"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="accept"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="disable"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="limit"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="offset"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
 <class name="GetNewsByIdMessageProcessor"
  extends="org.mule.module.processors.AbstractMessageProcessor"
  abstract="false"
@@ -3782,19 +4776,6 @@
 </exception>
 </method>
 <method name="setAccept"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="value" type="java.lang.Object">
-</parameter>
-</method>
-<method name="setDates"
  return="void"
  abstract="false"
  native="false"
@@ -3895,16 +4876,6 @@
  visibility="protected"
 >
 </field>
-<field name="_datesType"
- type="java.lang.String"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
 <field name="_insiderType"
  type="java.lang.String"
  transient="false"
@@ -3946,16 +4917,6 @@
 >
 </field>
 <field name="accept"
- type="java.lang.Object"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="dates"
  type="java.lang.Object"
  transient="false"
  volatile="false"

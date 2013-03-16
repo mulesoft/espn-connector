@@ -74,7 +74,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico" />
 <title>
 
-  GetTeamsMessageProcessor
+  GetEspnNowPopularMessageProcessor
 
 
 | Mule ESPN Cloud Connector
@@ -229,7 +229,7 @@
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetAthletesMessageProcessor.html">GetAthletesMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetAthletesNewsMessageProcessor.html">GetAthletesNewsMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetEspnNowMessageProcessor.html">GetEspnNowMessageProcessor</a></li>
-          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetEspnNowPopularMessageProcessor.html">GetEspnNowPopularMessageProcessor</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetEspnNowPopularMessageProcessor.html">GetEspnNowPopularMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetEspnNowTopMessageProcessor.html">GetEspnNowTopMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetNewsByIdMessageProcessor.html">GetNewsByIdMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetNewsHeadlinesMessageProcessor.html">GetNewsHeadlinesMessageProcessor</a></li>
@@ -238,7 +238,7 @@
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetSportsMessageProcessor.html">GetSportsMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetSportsOrganizingBodiesMessageProcessor.html">GetSportsOrganizingBodiesMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetSportsOrganizingGroupsDivisionsMessageProcessor.html">GetSportsOrganizingGroupsDivisionsMessageProcessor</a></li>
-          <li class="selected api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetTeamsMessageProcessor.html">GetTeamsMessageProcessor</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetTeamsMessageProcessor.html">GetTeamsMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/processors/GetTeamsNewsMessageProcessor.html">GetTeamsNewsMessageProcessor</a></li>
       </ul>
     </li>
@@ -420,7 +420,7 @@ Summary:
      
     
     class
-<h1>GetTeamsMessageProcessor</h1>
+<h1>GetEspnNowPopularMessageProcessor</h1>
 
 
 
@@ -496,7 +496,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
         
-        <td colspan="1" class="jd-inheritance-class-cell">org.mule.module.processors.GetTeamsMessageProcessor</td>
+        <td colspan="1" class="jd-inheritance-class-cell">org.mule.module.processors.GetEspnNowPopularMessageProcessor</td>
     </tr>
     
 
@@ -512,7 +512,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>GetTeamsMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getTeams(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getTeams(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
+<p>GetEspnNowPopularMessageProcessor invokes the <code><a href="../../../../../java/org/mule/module/EspnConnector.html#getEspnNowPopular(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">getEspnNowPopular(java.lang.String, java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../../../../../java/org/mule/module/EspnConnector.html">EspnConnector</a></code>. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
  
 </p>
 
@@ -714,7 +714,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           String</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#_acceptType">_acceptType</a></td>
+          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#_acceptType">_acceptType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -725,7 +725,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           String</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#_enableType">_enableType</a></td>
+          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#_disableType">_disableType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -736,7 +736,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           String</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#_groupsType">_groupsType</a></td>
+          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#_limitType">_limitType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -747,51 +747,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           String</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#_languageType">_languageType</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          String</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#_limitType">_limitType</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class=" api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          String</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#_offsetType">_offsetType</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          String</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#_resourceType">_resourceType</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class=" api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          String</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#_teamIdType">_teamIdType</a></td>
+          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#_offsetType">_offsetType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -802,7 +758,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           Object</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#accept">accept</a></td>
+          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#accept">accept</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -813,7 +769,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           Object</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#enable">enable</a></td>
+          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#disable">disable</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -824,7 +780,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           Object</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#groups">groups</a></td>
+          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#limit">limit</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -835,51 +791,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           Object</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#language">language</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          Object</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#limit">limit</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class=" api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          Object</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#offset">offset</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          Object</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#resource">resource</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-      <tr class=" api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          Object</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#teamId">teamId</a></td>
+          <td class="jd-linkcol"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#offset">offset</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -998,7 +910,7 @@ org.mule.api.lifecycle.Stoppable
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#GetTeamsMessageProcessor()">GetTeamsMessageProcessor</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#GetEspnNowPopularMessageProcessor()">GetEspnNowPopularMessageProcessor</a></span>()</nobr>
         
   </td></tr>
 
@@ -1027,7 +939,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#dispose()">dispose</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#dispose()">dispose</a></span>()</nobr>
         
   </td></tr>
 
@@ -1043,7 +955,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#initialise()">initialise</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#initialise()">initialise</a></span>()</nobr>
         
         <div class="jd-descrdiv">Obtains the expression manager from the Mule context and initialises the connector.</div>
   
@@ -1061,7 +973,7 @@ org.mule.api.lifecycle.Stoppable
             MuleEvent</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#process(org.mule.api.MuleEvent)">process</a></span>(MuleEvent event)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#process(org.mule.api.MuleEvent)">process</a></span>(MuleEvent event)</nobr>
         
         <div class="jd-descrdiv">Invokes the MessageProcessor.</div>
   
@@ -1079,7 +991,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#setAccept(java.lang.Object)">setAccept</a></span>(Object value)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#setAccept(java.lang.Object)">setAccept</a></span>(Object value)</nobr>
         
         <div class="jd-descrdiv">Sets accept</div>
   
@@ -1097,9 +1009,9 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#setEnable(java.lang.Object)">setEnable</a></span>(Object value)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#setDisable(java.lang.Object)">setDisable</a></span>(Object value)</nobr>
         
-        <div class="jd-descrdiv">Sets enable</div>
+        <div class="jd-descrdiv">Sets disable</div>
   
   </td></tr>
 
@@ -1115,7 +1027,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#setFlowConstruct(org.mule.api.construct.FlowConstruct)">setFlowConstruct</a></span>(FlowConstruct flowConstruct)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#setFlowConstruct(org.mule.api.construct.FlowConstruct)">setFlowConstruct</a></span>(FlowConstruct flowConstruct)</nobr>
         
         <div class="jd-descrdiv">Sets flow construct</div>
   
@@ -1133,43 +1045,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#setGroups(java.lang.Object)">setGroups</a></span>(Object value)</nobr>
-        
-        <div class="jd-descrdiv">Sets groups</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#setLanguage(java.lang.Object)">setLanguage</a></span>(Object value)</nobr>
-        
-        <div class="jd-descrdiv">Sets language</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#setLimit(java.lang.Object)">setLimit</a></span>(Object value)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#setLimit(java.lang.Object)">setLimit</a></span>(Object value)</nobr>
         
         <div class="jd-descrdiv">Sets limit</div>
   
@@ -1187,7 +1063,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#setMuleContext(org.mule.api.MuleContext)">setMuleContext</a></span>(MuleContext context)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#setMuleContext(org.mule.api.MuleContext)">setMuleContext</a></span>(MuleContext context)</nobr>
         
         <div class="jd-descrdiv">Set the Mule context</div>
   
@@ -1205,7 +1081,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#setOffset(java.lang.Object)">setOffset</a></span>(Object value)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#setOffset(java.lang.Object)">setOffset</a></span>(Object value)</nobr>
         
         <div class="jd-descrdiv">Sets offset</div>
   
@@ -1223,43 +1099,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#setResource(java.lang.Object)">setResource</a></span>(Object value)</nobr>
-        
-        <div class="jd-descrdiv">Sets resource</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#setTeamId(java.lang.Object)">setTeamId</a></span>(Object value)</nobr>
-        
-        <div class="jd-descrdiv">Sets teamId</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#start()">start</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#start()">start</a></span>()</nobr>
         
   </td></tr>
 
@@ -1275,7 +1115,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetTeamsMessageProcessor.html#stop()">stop</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/processors/GetEspnNowPopularMessageProcessor.html#stop()">stop</a></span>()</nobr>
         
   </td></tr>
 
@@ -2234,7 +2074,7 @@ From interface
 
 
 
-<A NAME="_enableType"></A>
+<A NAME="_disableType"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2244,67 +2084,7 @@ From interface
          
         String
       </span>
-        _enableType
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="_groupsType"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        String
-      </span>
-        _groupsType
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="_languageType"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        String
-      </span>
-        _languageType
+        _disableType
     </h4>
       <div class="api-level">
         
@@ -2384,66 +2164,6 @@ From interface
 
 
 
-<A NAME="_resourceType"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        String
-      </span>
-        _resourceType
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="_teamIdType"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        String
-      </span>
-        _teamIdType
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
 <A NAME="accept"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -2474,7 +2194,7 @@ From interface
 
 
 
-<A NAME="enable"></A>
+<A NAME="disable"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2484,67 +2204,7 @@ From interface
          
         Object
       </span>
-        enable
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="groups"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        Object
-      </span>
-        groups
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="language"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        Object
-      </span>
-        language
+        disable
     </h4>
       <div class="api-level">
         
@@ -2624,66 +2284,6 @@ From interface
 
 
 
-<A NAME="resource"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        Object
-      </span>
-        resource
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="teamId"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-        Object
-      </span>
-        teamId
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
 
 <!-- Public ctors -->
 
@@ -2693,7 +2293,7 @@ From interface
 
 
 
-<A NAME="GetTeamsMessageProcessor()"></A>
+<A NAME="GetEspnNowPopularMessageProcessor()"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2705,7 +2305,7 @@ From interface
          
         
       </span>
-      <span class="sympad">GetTeamsMessageProcessor</span>
+      <span class="sympad">GetEspnNowPopularMessageProcessor</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">
@@ -2900,7 +2500,7 @@ From interface
 </div>
 
 
-<A NAME="setEnable(java.lang.Object)"></A>
+<A NAME="setDisable(java.lang.Object)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2912,7 +2512,7 @@ From interface
          
         void
       </span>
-      <span class="sympad">setEnable</span>
+      <span class="sympad">setDisable</span>
       <span class="normal">(Object value)</span>
     </h4>
       <div class="api-level">
@@ -2925,7 +2525,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Sets enable</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Sets disable</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
@@ -2973,88 +2573,6 @@ From interface
         <tr>
           <th>flowConstruct</td>
           <td>Flow construct to set
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="setGroups(java.lang.Object)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">setGroups</span>
-      <span class="normal">(Object value)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Sets groups</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>value</td>
-          <td>Value to set
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="setLanguage(java.lang.Object)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">setLanguage</span>
-      <span class="normal">(Object value)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Sets language</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>value</td>
-          <td>Value to set
 </td>
         </tr>
       </table>
@@ -3172,88 +2690,6 @@ From interface
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p>Sets offset</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>value</td>
-          <td>Value to set
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="setResource(java.lang.Object)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">setResource</span>
-      <span class="normal">(Object value)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Sets resource</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>value</td>
-          <td>Value to set
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="setTeamId(java.lang.Object)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">setTeamId</span>
-      <span class="normal">(Object value)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Sets teamId</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">

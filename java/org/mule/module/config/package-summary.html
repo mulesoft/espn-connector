@@ -70,7 +70,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <meta name="description" content="Documentation for ESPN Connector." />
+  <meta name="description" content="Documentation for Mule ESPN Cloud Connector." />
 
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico" />
 <title>
@@ -78,7 +78,7 @@
   org.mule.module.config
 
 
-| ESPN Connector
+| Mule ESPN Cloud Connector
 
 </title>
 <link href="../../../../../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
@@ -121,7 +121,7 @@
   feedback_widget_options.color = "#2F74AE";
   feedback_widget_options.style = "question";
 
-  feedback_widget_options.tag = "ESPN Connector";
+  feedback_widget_options.tag = "Mule ESPN Cloud Connector";
 
   feedback_widget_options.limit = "3";
 
@@ -134,7 +134,7 @@
 <div id="header">
     <div id="headerLeft">
     
-      <span id="masthead-title">ESPN Connector</span>
+      <span id="masthead-title">Mule ESPN Cloud Connector</span>
     
     <ul id="header-tabs" class="java">
     
@@ -230,10 +230,13 @@
     <li><h2>Classes</h2>
       <ul>
         <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/AbstractDefinitionParser.html">AbstractDefinitionParser</a></li>
-        <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/espnConnectorConfigDefinitionParser.html">espnConnectorConfigDefinitionParser</a></li>
+        <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/EspnConnectorConfigDefinitionParser.html">EspnConnectorConfigDefinitionParser</a></li>
         <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/EspnNamespaceHandler.html">EspnNamespaceHandler</a></li>
         <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetAthletesDefinitionParser.html">GetAthletesDefinitionParser</a></li>
         <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetAthletesNewsDefinitionParser.html">GetAthletesNewsDefinitionParser</a></li>
+        <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetEspnNowDefinitionParser.html">GetEspnNowDefinitionParser</a></li>
+        <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetEspnNowPopularDefinitionParser.html">GetEspnNowPopularDefinitionParser</a></li>
+        <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetEspnNowTopDefinitionParser.html">GetEspnNowTopDefinitionParser</a></li>
         <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetNewsByIdDefinitionParser.html">GetNewsByIdDefinitionParser</a></li>
         <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetNewsDefinitionParser.html">GetNewsDefinitionParser</a></li>
         <li class="api apilevel-"><a href="../../../../../java/org/mule/module/config/GetNewsHeadlinesDefinitionParser.html">GetNewsHeadlinesDefinitionParser</a></li>
@@ -331,7 +334,7 @@
               <td class="jd-descrcol" width="100%">&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/config/espnConnectorConfigDefinitionParser.html">espnConnectorConfigDefinitionParser</a></td>
+              <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/config/EspnConnectorConfigDefinitionParser.html">EspnConnectorConfigDefinitionParser</a></td>
               <td class="jd-descrcol" width="100%">&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-" >
@@ -347,38 +350,50 @@
               <td class="jd-descrcol" width="100%">&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/config/GetEspnNowDefinitionParser.html">GetEspnNowDefinitionParser</a></td>
+              <td class="jd-descrcol" width="100%">&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/config/GetEspnNowPopularDefinitionParser.html">GetEspnNowPopularDefinitionParser</a></td>
+              <td class="jd-descrcol" width="100%">&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/config/GetEspnNowTopDefinitionParser.html">GetEspnNowTopDefinitionParser</a></td>
+              <td class="jd-descrcol" width="100%">&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/config/GetNewsByIdDefinitionParser.html">GetNewsByIdDefinitionParser</a></td>
               <td class="jd-descrcol" width="100%">&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/config/GetNewsDefinitionParser.html">GetNewsDefinitionParser</a></td>
               <td class="jd-descrcol" width="100%">&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/config/GetNewsHeadlinesDefinitionParser.html">GetNewsHeadlinesDefinitionParser</a></td>
               <td class="jd-descrcol" width="100%">&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/config/GetNewsHeadlinesTopDefinitionParser.html">GetNewsHeadlinesTopDefinitionParser</a></td>
               <td class="jd-descrcol" width="100%">&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/config/GetSportsDefinitionParser.html">GetSportsDefinitionParser</a></td>
               <td class="jd-descrcol" width="100%">&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/config/GetSportsOrganizingBodiesDefinitionParser.html">GetSportsOrganizingBodiesDefinitionParser</a></td>
               <td class="jd-descrcol" width="100%">&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/config/GetSportsOrganizingGroupsDivisionsDefinitionParser.html">GetSportsOrganizingGroupsDivisionsDefinitionParser</a></td>
               <td class="jd-descrcol" width="100%">&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/config/GetTeamsDefinitionParser.html">GetTeamsDefinitionParser</a></td>
               <td class="jd-descrcol" width="100%">&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/config/GetTeamsNewsDefinitionParser.html">GetTeamsNewsDefinitionParser</a></td>
               <td class="jd-descrcol" width="100%">&nbsp;</td>
           </tr>
