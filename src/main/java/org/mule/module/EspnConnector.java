@@ -29,7 +29,8 @@ import java.io.IOException;
 @Connector(name="espn", schemaVersion="1.0", friendlyName="ESPN")
 public abstract class EspnConnector
 {
-    public static final String BASE_URI = "http://api.espn.com/v1";
+    public static final String BASE_URI = "http://api.espn.com/";
+    public static final String API_VERSION = "v1";
 
     @RestHttpClient
     private HttpClient httpClient;
@@ -97,7 +98,7 @@ public abstract class EspnConnector
      *
      */
     @Processor
-    @RestCall(uri = BASE_URI + "/{resource}/athletes/{athleteId}/dates/{dates}?apikey={apiKey}", method = HttpMethod.GET)
+    @RestCall(uri = BASE_URI + API_VERSION + "/{resource}/athletes/{athleteId}/dates/{dates}?apikey={apiKey}", method = HttpMethod.GET)
     public abstract String getAthletes(@RestUriParam("resource") String resource,
                                        @Optional @Default("") @RestUriParam("athleteId") String athleteId,
                                        @Optional @Default("") @RestUriParam("dates") String dates,
@@ -129,7 +130,7 @@ public abstract class EspnConnector
      *
      */
     @Processor
-    @RestCall(uri = BASE_URI + "/{resource}/teams/{teamId}?apikey={apiKey}", method = HttpMethod.GET)
+    @RestCall(uri = BASE_URI + API_VERSION + "/{resource}/teams/{teamId}?apikey={apiKey}", method = HttpMethod.GET)
     public abstract String getTeams(@RestUriParam("resource") String resource,
                                     @Optional @Default("") @RestUriParam("teamId") String teamId,
                                     @Optional @Default("") @RestQueryParam("enable") String enable,
@@ -158,9 +159,9 @@ public abstract class EspnConnector
      *
      */
     @Processor
-    @RestCall(uri = BASE_URI + "/{resource}/news?apikey={apiKey}", method = HttpMethod.GET)
+    @RestCall(uri = BASE_URI + API_VERSION + "/{resource}/news?apikey={apiKey}", method = HttpMethod.GET)
     public abstract String getNews(@RestUriParam("resource") String resource,
-                                   @Optional @Default("") @RestQueryParam("dates") String dates,
+                                   @RestQueryParam("dates") String dates,
                                    @Optional @Default("yes") @RestQueryParam("insider") String insider,
                                    @Optional @Default("en") @RestQueryParam("lang") String language,
                                    @Optional @Default("50") @RestQueryParam("limit") String limit,
@@ -174,7 +175,6 @@ public abstract class EspnConnector
      *
      * @param resource ESPN resource (i.e. /espnw)
      * @param newsId ESPN specific story identifier
-     * @param dates Integer in the form of "yyyymmdd" to get news for a particular date.
      * @param insider ESPN content to be included, valid values: yes, no, only
      * @param language ESPN lang - valid values include 'en' (English) and 'es' (Spanish)
      * @param accept Used when you can not set the Accepted header (i.e. application/json, text/xml)
@@ -183,10 +183,9 @@ public abstract class EspnConnector
      *
      */
     @Processor
-    @RestCall(uri = BASE_URI + "/{resource}/news/{newsId}?apikey={apiKey}", method = HttpMethod.GET)
+    @RestCall(uri = BASE_URI + API_VERSION + "/{resource}/news/{newsId}?apikey={apiKey}", method = HttpMethod.GET)
     public abstract String getNewsById(@RestUriParam("resource") String resource,
                                    @Optional @Default("") @RestUriParam("newsId") String newsId,
-                                   @Optional @Default("") @RestQueryParam("dates") String dates,
                                    @Optional @Default("yes") @RestQueryParam("insider") String insider,
                                    @Optional @Default("en") @RestQueryParam("lang") String language,
                                    @Optional @Default("application/json") @RestQueryParam("_accept") String accept) throws IOException;
@@ -208,7 +207,7 @@ public abstract class EspnConnector
      *
      */
     @Processor
-    @RestCall(uri = BASE_URI + "/{resource}/news/headlines?apikey={apiKey}", method = HttpMethod.GET)
+    @RestCall(uri = BASE_URI + API_VERSION + "/{resource}/news/headlines?apikey={apiKey}", method = HttpMethod.GET)
     public abstract String getNewsHeadlines(@RestUriParam("resource") String resource,
                                             @Optional @Default("yes") @RestQueryParam("insider") String insider,
                                             @Optional @Default("en") @RestQueryParam("lang") String language,
@@ -234,7 +233,7 @@ public abstract class EspnConnector
      *
      */
     @Processor
-    @RestCall(uri = BASE_URI + "/{resource}/news/headlines/top?apikey={apiKey}", method = HttpMethod.GET)
+    @RestCall(uri = BASE_URI + API_VERSION + "/{resource}/news/headlines/top?apikey={apiKey}", method = HttpMethod.GET)
     public abstract String getNewsHeadlinesTop(@RestUriParam("resource") String resource,
                                                @Optional @Default("yes") @RestQueryParam("insider") String insider,
                                                @Optional @Default("en") @RestQueryParam("lang") String language,
@@ -262,10 +261,10 @@ public abstract class EspnConnector
      *
      */
     @Processor
-    @RestCall(uri = BASE_URI + "/{resource}/athletes/{athleteId}/news?apikey={apiKey}", method = HttpMethod.GET)
+    @RestCall(uri = BASE_URI + API_VERSION + "/{resource}/athletes/{athleteId}/news?apikey={apiKey}", method = HttpMethod.GET)
     public abstract String getAthletesNews(@RestUriParam("resource") String resource,
                                            @RestUriParam("athleteId") String athleteId,
-                                           @Optional @Default("") @RestQueryParam("dates") String dates,
+                                           @RestQueryParam("dates") String dates,
                                            @Optional @Default("yes") @RestQueryParam("insider") String insider,
                                            @Optional @Default("en") @RestQueryParam("lang") String language,
                                            @Optional @Default("50") @RestQueryParam("limit") String limit,
@@ -291,10 +290,10 @@ public abstract class EspnConnector
      *
      */
     @Processor
-    @RestCall(uri = BASE_URI + "/{resource}/teams/{teamId}/news?apikey={apiKey}", method = HttpMethod.GET)
+    @RestCall(uri = BASE_URI + API_VERSION + "/{resource}/teams/{teamId}/news?apikey={apiKey}", method = HttpMethod.GET)
     public abstract String getTeamsNews(@RestUriParam("resource") String resource,
                                         @RestUriParam("teamId") String teamId,
-                                        @Optional @Default("") @RestQueryParam("dates") String dates,
+                                        @RestQueryParam("dates") String dates,
                                         @Optional @Default("yes") @RestQueryParam("insider") String insider,
                                         @Optional @Default("en") @RestQueryParam("lang") String language,
                                         @Optional @Default("50") @RestQueryParam("limit") String limit,
@@ -319,7 +318,7 @@ public abstract class EspnConnector
      *
      */
     @Processor
-    @RestCall(uri = BASE_URI + "/sports?apikey={apiKey}", method = HttpMethod.GET)
+    @RestCall(uri = BASE_URI + API_VERSION + "/sports?apikey={apiKey}", method = HttpMethod.GET)
     public abstract String getSports(@Optional @Default("50") @RestQueryParam("limit") String limit,
                                      @Optional @Default("0") @RestQueryParam("offset") String offset,
                                      @Optional @Default("application/json") @RestQueryParam("_accept") String accept) throws IOException;
@@ -338,7 +337,7 @@ public abstract class EspnConnector
      *
      */
     @Processor
-    @RestCall(uri = BASE_URI + "/sports/{sport}?apikey={apiKey}", method = HttpMethod.GET)
+    @RestCall(uri = BASE_URI + API_VERSION + "/sports/{sport}?apikey={apiKey}", method = HttpMethod.GET)
     public abstract String getSportsOrganizingBodies(@RestUriParam("sport") String sport,
                                                      @Optional @Default("50") @RestQueryParam("limit") String limit,
                                                      @Optional @Default("0") @RestQueryParam("offset") String offset,
@@ -359,11 +358,78 @@ public abstract class EspnConnector
      *
      */
     @Processor
-    @RestCall(uri = BASE_URI + "/sports/{sport}/{league}?apikey={apiKey}", method = HttpMethod.GET)
+    @RestCall(uri = BASE_URI + API_VERSION + "/sports/{sport}/{league}?apikey={apiKey}", method = HttpMethod.GET)
     public abstract String getSportsOrganizingGroupsDivisions(@RestUriParam("sport") String sport,
                                                               @RestUriParam("league") String league,
                                                               @Optional @Default("50") @RestQueryParam("limit") String limit,
                                                               @Optional @Default("0") @RestQueryParam("offset") String offset,
                                                               @Optional @Default("application/json") @RestQueryParam("_accept") String accept) throws IOException;
+
+
+    /**
+     * getEspnNow
+     *
+     * {@sample.xml ../../../doc/espn-connector.xml.sample espn:get-espn-now}
+     *
+     * @param leagues String denoting a particular sport category or sports league/organizing body, defaults to 'mlb' if none provided.
+     * @param teams Comma-separated list of team IDs to filter by. Requires 'leagues' being set.
+     * @param content Comma-separated list of content types to filter by. Only applicable to the base /now endpoint with no teams or leagues parameters. Supported content type filters are: 'video'
+     * @param disable Optional flag to disable specific information, with the following options. Accepts a single value or a comma delimited string of values.
+     * @param limit Used to limit the number of results returned
+     * @param offset Used for pagination (i.e. 11 will start with the 11th entry in the response)
+     * @param accept Used when you can not set the Accepted header (i.e. application/json, text/xml)
+     * @return String returns information for all groups/divisions that make up an organizing body (i.e. MLB) (can be JSON or XML depending on 'accept' parameter).
+     * @throws IOException Thrown in the event of a communications error
+     *
+     */
+    @Processor
+    @RestCall(uri = BASE_URI + API_VERSION + "/now/?apikey={apiKey}", method = HttpMethod.GET)
+    public abstract String getEspnNow(@Optional @Default("mlb") @RestQueryParam("leagues") String leagues,
+                                      @Optional @Default("") @RestQueryParam("teams") String teams,
+                                      @Optional @Default("") @RestQueryParam("content") String content,
+                                      @Optional @Default("") @RestQueryParam("disable") String disable,
+                                      @Optional @Default("50") @RestQueryParam("limit") String limit,
+                                      @Optional @Default("0") @RestQueryParam("offset") String offset,
+                                      @Optional @Default("application/json") @RestQueryParam("_accept") String accept) throws IOException;
+
+    /**
+     * getEspnNowTop
+     *
+     * {@sample.xml ../../../doc/espn-connector.xml.sample espn:get-espn-now-top}
+     *
+     * @param disable Optional flag to disable specific information, with the following options. Accepts a single value or a comma delimited string of values.
+     * @param limit Used to limit the number of results returned
+     * @param offset Used for pagination (i.e. 11 will start with the 11th entry in the response)
+     * @param accept Used when you can not set the Accepted header (i.e. application/json, text/xml)
+     * @return String returns information for all groups/divisions that make up an organizing body (i.e. MLB) (can be JSON or XML depending on 'accept' parameter).
+     * @throws IOException Thrown in the event of a communications error
+     *
+     */
+    @Processor
+    @RestCall(uri = BASE_URI + API_VERSION + "/now/top?apikey={apiKey}", method = HttpMethod.GET)
+    public abstract String getEspnNowTop(@Optional @Default("") @RestQueryParam("disable") String disable,
+                                         @Optional @Default("50") @RestQueryParam("limit") String limit,
+                                         @Optional @Default("0") @RestQueryParam("offset") String offset,
+                                         @Optional @Default("application/json") @RestQueryParam("_accept") String accept) throws IOException;
+
+    /**
+     * getEspnNowPopular
+     *
+     * {@sample.xml ../../../doc/espn-connector.xml.sample espn:get-espn-now-popular}
+     *
+     * @param disable Optional flag to disable specific information, with the following options. Accepts a single value or a comma delimited string of values.
+     * @param limit Used to limit the number of results returned
+     * @param offset Used for pagination (i.e. 11 will start with the 11th entry in the response)
+     * @param accept Used when you can not set the Accepted header (i.e. application/json, text/xml)
+     * @return String returns information for all groups/divisions that make up an organizing body (i.e. MLB) (can be JSON or XML depending on 'accept' parameter).
+     * @throws IOException Thrown in the event of a communications error
+     *
+     */
+    @Processor
+    @RestCall(uri = BASE_URI + API_VERSION + "/now/popular?apikey={apiKey}", method = HttpMethod.GET)
+    public abstract String getEspnNowPopular(@Optional @Default("") @RestQueryParam("disable") String disable,
+                                             @Optional @Default("50") @RestQueryParam("limit") String limit,
+                                             @Optional @Default("0") @RestQueryParam("offset") String offset,
+                                             @Optional @Default("application/json") @RestQueryParam("_accept") String accept) throws IOException;
 
 }

@@ -27,6 +27,8 @@ import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
 import java.io.StringReader;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -195,10 +197,15 @@ public class EspnConnectorTest extends FunctionalTestCase
      */
 
     @Test
-    public void failingTestGetNews() throws Exception
+    public void testGetNews() throws Exception
     {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+        Calendar calendar = Calendar.getInstance();
+        String today = simpleDateFormat.format(calendar.getTime());
+
         Map msg = new HashMap();
         msg.put("resource","sports/baseball/mlb");
+        msg.put("dates",today);
 
         runFlowWithPayloadAndExpectJSON("getNews","success", msg, "status");
     }
@@ -206,38 +213,52 @@ public class EspnConnectorTest extends FunctionalTestCase
     @Test
     public void testGetNews_ByDates() throws Exception
     {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+        Calendar calendar = Calendar.getInstance();
+        String today = simpleDateFormat.format(calendar.getTime());
+
         Map msg = new HashMap();
         msg.put("resource","sports/baseball/mlb");
-        msg.put("dates","20120821");
+        msg.put("dates",today);
 
         runFlowWithPayloadAndExpectJSON("getNews_ByDates","success", msg, "status");
     }
 
 
     @Test
-    public void failingTestGetNews_ByInsider() throws Exception
+    public void testGetNews_ByInsider() throws Exception
     {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+        Calendar calendar = Calendar.getInstance();
+        String today = simpleDateFormat.format(calendar.getTime());
+
         Map msg = new HashMap();
         msg.put("resource","sports/baseball/mlb");
         msg.put("insider","only");
+        msg.put("dates",today);
 
         runFlowWithPayloadAndExpectJSON("getNews_ByInsider","success", msg, "status");
     }
 
 
     @Test
-    public void failingTestGetNews_ByLanguage() throws Exception
+    public void testGetNews_ByLanguage() throws Exception
     {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+        Calendar calendar = Calendar.getInstance();
+        String today = simpleDateFormat.format(calendar.getTime());
+
         Map msg = new HashMap();
         msg.put("resource","sports/baseball/mlb");
         msg.put("lang","es");
+        msg.put("dates",today);
 
         runFlowWithPayloadAndExpectJSON("getNews_ByLanguage","success", msg, "status");
     }
 
 
     @Test
-    public void failingTestGetNews_ByNewsId() throws Exception
+    public void testGetNews_ByNewsId() throws Exception
     {
         Map msg = new HashMap();
         msg.put("resource","sports/baseball/mlb");
@@ -276,23 +297,83 @@ public class EspnConnectorTest extends FunctionalTestCase
     }
 
     @Test
-    public void failingTestGetAthletesNews() throws Exception
+    public void testGetAthletesNews() throws Exception
     {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+        Calendar calendar = Calendar.getInstance();
+        String today = simpleDateFormat.format(calendar.getTime());
+
         Map msg = new HashMap();
         msg.put("resource","sports/baseball/mlb");
         msg.put("athleteId","31662");
+        msg.put("dates",today);
 
-        runFlowWithPayloadAndExpectJSON("getAthletesNews","success", msg, "status");
+        runFlowWithPayloadAndExpectJSON("getAthletesNews", "success", msg, "status");
     }
 
     @Test
-    public void failingTestGetTeamsNews() throws Exception
+    public void testGetTeamsNews() throws Exception
     {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+        Calendar calendar = Calendar.getInstance();
+        String today = simpleDateFormat.format(calendar.getTime());
+
         Map msg = new HashMap();
         msg.put("resource","sports/baseball/mlb");
         msg.put("teamId","2");
+        msg.put("dates",today);
 
         runFlowWithPayloadAndExpectJSON("getTeamsNews","success", msg, "status");
+    }
+
+    /**
+     * ESPN Now API
+     */
+
+    @Test
+    public void testGetEspnNow() throws Exception
+    {
+        runFlowAndExpectJSON("getEspnNow", "success", "status");
+    }
+
+    @Test
+    public void testGetEspnNow_ByLeaguesAndTeams() throws Exception
+    {
+        Map msg = new HashMap();
+        msg.put("leagues","mlb");
+        msg.put("teams","26,13");
+
+        runFlowWithPayloadAndExpectJSON("getEspnNow_ByLeaguesAndTeams", "success", msg, "status");
+    }
+
+    @Test
+    public void testGetEspnNow_ByContent() throws Exception
+    {
+        Map msg = new HashMap();
+        msg.put("content","video");
+
+        runFlowWithPayloadAndExpectJSON("getEspnNow_ByContent", "success", msg, "status");
+    }
+
+    @Test
+    public void failingTestGetEspnNow_ByDisable() throws Exception
+    {
+        Map msg = new HashMap();
+        msg.put("disable","categories");
+
+        runFlowWithPayloadAndExpectJSON("testGetEspnNow_ByDisable", "success", msg, "status");
+    }
+
+    @Test
+    public void testGetEspnNowTop() throws Exception
+    {
+        runFlowAndExpectJSON("getEspnNowTop", "success", "status");
+    }
+
+    @Test
+    public void testGetEspnNowPopular() throws Exception
+    {
+        runFlowAndExpectJSON("getEspnNowPopular","success", "status");
     }
 
     /**

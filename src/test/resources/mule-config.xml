@@ -90,7 +90,7 @@
     <!-- ESPN Headlines API -->
 
     <flow name="getNews">
-        <espn:get-news resource="#[message.payload['resource']]"/>
+        <espn:get-news resource="#[message.payload['resource']]" dates="#[message.payload['dates']]"/>
         <logger level="WARN" message="Message payload = #[message.payload]"/>
     </flow>
 
@@ -100,12 +100,12 @@
     </flow>
 
     <flow name="getNews_ByInsider">
-        <espn:get-news resource="#[message.payload['resource']]" insider="#[message.payload['insider']]"/>
+        <espn:get-news resource="#[message.payload['resource']]" insider="#[message.payload['insider']]" dates="#[message.payload['dates']]"/>
         <logger level="WARN" message="Message payload = #[message.payload]"/>
     </flow>
 
     <flow name="getNews_ByLanguage">
-        <espn:get-news resource="#[message.payload['resource']]" language="#[message.payload['lang']]"/>
+        <espn:get-news resource="#[message.payload['resource']]" language="#[message.payload['lang']]" dates="#[message.payload['dates']]"/>
         <logger level="WARN" message="Message payload = #[message.payload]"/>
     </flow>
 
@@ -130,12 +130,44 @@
     </flow>
 
     <flow name="getAthletesNews">
-        <espn:get-athletes-news resource="#[message.payload['resource']]" athleteId="#[message.payload['athleteId']]"/>
+        <espn:get-athletes-news resource="#[message.payload['resource']]" athleteId="#[message.payload['athleteId']]" dates="#[message.payload['dates']]"/>
         <logger level="WARN" message="Message payload = #[message.payload]"/>
     </flow>
 
     <flow name="getTeamsNews">
-        <espn:get-teams-news resource="#[message.payload['resource']]" teamId="#[message.payload['teamId']]"/>
+        <espn:get-teams-news resource="#[message.payload['resource']]" teamId="#[message.payload['teamId']]" dates="#[message.payload['dates']]"/>
+        <logger level="WARN" message="Message payload = #[message.payload]"/>
+    </flow>
+
+    <!-- ESPN Now API -->
+
+    <flow name="getEspnNow">
+        <espn:get-espn-now/>
+        <logger level="WARN" message="Message payload = #[message.payload]"/>
+    </flow>
+
+    <flow name="getEspnNow_ByLeaguesAndTeams">
+        <espn:get-espn-now leagues="#[message.payload['leagues']]" teams="#[message.payload['teams']]"/>
+        <logger level="WARN" message="Message payload = #[message.payload]"/>
+    </flow>
+
+    <flow name="getEspnNow_ByContent">
+        <espn:get-espn-now content="#[message.payload['content']]"/>
+        <logger level="WARN" message="Message payload = #[message.payload]"/>
+    </flow>
+
+    <flow name="getEspnNow_ByDisable">
+        <espn:get-espn-now disable="#[message.payload['disable']]"/>
+        <logger level="WARN" message="Message payload = #[message.payload]"/>
+    </flow>
+
+    <flow name="getEspnNowTop">
+        <espn:get-espn-now-top/>
+        <logger level="WARN" message="Message payload = #[message.payload]"/>
+    </flow>
+
+    <flow name="getEspnNowPopular">
+        <espn:get-espn-now-popular/>
         <logger level="WARN" message="Message payload = #[message.payload]"/>
     </flow>
 
